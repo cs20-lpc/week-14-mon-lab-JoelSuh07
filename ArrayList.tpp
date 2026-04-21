@@ -1,11 +1,25 @@
 template <typename T>
 void ArrayList<T>::bubbleSort() {
     // TODO
+    for (int i = 0; i < buffer.size() - 1; ++i){ // for loop for repeating the entire array
+
+        for (int j = 0; j < buffer.size() - 1; ++i){ // for loop for comparing the elements
+
+            if (buffer[j] > buffer[j + 1]){
+                swap(buffer[j], buffer[j + 1]);
+                ++numComps;
+                ++numSwap;
+            } else {
+                ++numComps; // if no swap needed, just increment numComps
+            }
+        }
+    }
 }
 
 template <typename T>
 void ArrayList<T>::insertionSort() {
     // TODO
+    for 
 }
 
 template <typename T>
