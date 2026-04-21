@@ -44,10 +44,12 @@ void ArrayList<T>::selectionSort() {
             while (buffer[j] > buffer[i]){
                 t = j;
                 j = j - 1;
+                ++numComps;
             }
             
             if (i != t){
                 swap(buffer[i], buffer[t]);
+                ++numSwaps;
             }
             
             ++i;
