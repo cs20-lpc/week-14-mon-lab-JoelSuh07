@@ -19,12 +19,40 @@ void ArrayList<T>::bubbleSort() {
 template <typename T>
 void ArrayList<T>::insertionSort() {
     // TODO
-    for 
+    for (int i = 1; i < buffer.size(); ++i){
+        int key = buffer[i];
+        int j = buffer[i-1];
+
+        while (j >= 0 && buffer[j] > key){
+            buffer[j + 1] = buffer[j];
+            j = j - 1; //moving back 1 index, to keep compare
+            ++numComps;
+            ++numSwaps;
+        }
+        buffer[j + 1] = key; // putting key value into gap or correct spot
+    }
 }
 
 template <typename T>
 void ArrayList<T>::selectionSort() {
     // TODO
+    for (int i = 0; i < buffer.size() - 1; ++i){
+        int t = i;
+
+        for (int j = buffer.size() - 1; --i){
+
+            while (buffer[j] > buffer[i]){
+                t = j;
+                j = j - 1;
+            }
+            
+            if (i != t){
+                swap(buffer[i], buffer[t]);
+            }
+            
+            ++i;
+        }
+    }
 }
 
 /*******************************************************************************
