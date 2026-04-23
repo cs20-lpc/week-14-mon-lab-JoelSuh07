@@ -1,14 +1,14 @@
 template <typename T>
 void ArrayList<T>::bubbleSort() {
     // TODO
-    for (int i = 0; i < buffer.size() - 1; ++i){ // for loop for repeating the entire array
+    for (int i = 0; i < this->length - 1; ++i){ // for loop for repeating the entire array
 
-        for (int j = 0; j < buffer.size() - 1; ++i){ // for loop for comparing the elements
+        for (int j = 0; j < this->length - 1; ++j){ // for loop for comparing the elements
 
             if (buffer[j] > buffer[j + 1]){
-                swap(buffer[j], buffer[j + 1]);
+                swap(j, j+1);
                 ++numComps;
-                ++numSwap;
+                ++numSwaps;
             } else {
                 ++numComps; // if no swap needed, just increment numComps
             }
@@ -19,9 +19,9 @@ void ArrayList<T>::bubbleSort() {
 template <typename T>
 void ArrayList<T>::insertionSort() {
     // TODO
-    for (int i = 1; i < buffer.size(); ++i){
-        int key = buffer[i];
-        int j = buffer[i-1];
+    for (int i = 1; i < this->length; ++i){
+        T key = buffer[i];
+        int j = i-1;
 
         while (j >= 0 && buffer[j] > key){
             buffer[j + 1] = buffer[j];
@@ -36,10 +36,10 @@ void ArrayList<T>::insertionSort() {
 template <typename T>
 void ArrayList<T>::selectionSort() {
     // TODO
-    for (int i = 0; i < buffer.size() - 1; ++i){
+    for (int i = 0; i < this->length - 1; ++i){
         int t = i;
 
-        for (int j = buffer.size() - 1; --i){
+        for (int j = i + 1; j < this->length - 1; ++j){
 
             while (buffer[j] > buffer[i]){
                 t = j;
@@ -48,7 +48,7 @@ void ArrayList<T>::selectionSort() {
             }
             
             if (i != t){
-                swap(buffer[i], buffer[t]);
+                swap(i, t);
                 ++numSwaps;
             }
             
