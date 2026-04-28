@@ -39,7 +39,7 @@ void ArrayList<T>::selectionSort() {
     for (int i = 0; i < this->length - 1; ++i){
         int t = i;
 
-        for (int j = i + 1; j < this->length - 1; ++j){
+        for (int j = i + 1; j < this->length; ++j){
 
             while (buffer[j] > buffer[i]){
                 t = j;
