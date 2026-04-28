@@ -41,11 +41,14 @@ void ArrayList<T>::selectionSort() {
 
         for (int j = i + 1; j < this->length; ++j){
 
-            while (buffer[j] > buffer[i]){
+            //while (buffer[j] > buffer[i]){
+            if (buffer[j] < buffer[t]){
                 t = j;
-                j = j - 1;
+                //j = j - 1;
                 ++numComps;
             }
+        }
+            //}
             
             if (i != t){
                 swap(i, t);
@@ -55,7 +58,6 @@ void ArrayList<T>::selectionSort() {
             ++i;
         }
     }
-}
 
 /*******************************************************************************
  * No need to modify methods below :)
