@@ -37,13 +37,13 @@ template <typename T>
 void ArrayList<T>::selectionSort() {
     // TODO
     for (int i = 0; i < this->length - 1; ++i){
-        int t = i;
+        int t = i; // t is placeholder for smallest value
 
         for (int j = i + 1; j < this->length; ++j){
 
             //while (buffer[j] > buffer[i]){
-            if (buffer[j] < buffer[t]){
-                t = j;
+            if (buffer[j] < buffer[t]){ //constantly checks if t is the smallest
+                t = j; // if j lands on smaller value, assign it to t
                 //j = j - 1;
                 ++numComps;
             }
