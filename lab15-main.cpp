@@ -12,12 +12,12 @@ int main() {
     dict.insert("quack", "said Mr. Duck");
     dict.insert("haskell", "fantastic programming language, go learn it");
     dict.insert("banana", "a fruit that many like, or a phone");
-    dict.insert("dog", "a domesticated fluff ball");
+    /*dict.insert("dog", "a domesticated fluff ball");
     dict.insert("cactus", "a pointy plant");
     dict.insert("phoenix", "a bird on fire");
     dict.insert("igloo", "a cool house");
     dict.insert("graph", "an awesome data structure!");
-
+*/
     // display menu
     cout << "Welcome to my dictionary program!\n";
     cout << "Here are your options:\n";
